@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat; // Para formatação de datas em relatórios 
 
 public class IoTTag {
     private String tagId;
-    //coordenadas das mercadorias, para as localizar a 
+    //coordenadas das mercadorias, para as localizar
     private double latitude;
     private double longitude;
     

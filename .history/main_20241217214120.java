@@ -23,94 +23,71 @@ public class Main {
         }while (opcao != 0);
         System.out.println("Aplicaççao encerrada.");
 
-    }private static void mostrarMenu(){
-        System.out.println("||    ==== Gestão de Mercadorias em Armazéns ====    ||");
+    }
+    private static void mostrarMenu(){
+        System.out.println("||    ==== Gestão de Mercadorias em Armazens ====    ||");
         System.out.println("||              1. Criar Armazéns                    ||");
         System.out.println("||              2. Listar Armazéns                   ||");
         System.out.println("||              3. Criar Mercadoria                  ||");
-        System.out.println("||              4. Deletar Mercadoria                ||");
-        System.out.println("||              5. Criar Transporte de Reciclagem    ||");
-        System.out.println("||              6. Associar Mercadoria a Transporte  ||");
-        System.out.println("||              7. Listar Transportes                ||");
-        System.out.println("||              8. Validar Datas de Mercadorias      ||");
-        System.out.println("||              9. Mover Mercadorias Expiradas       ||");
-        System.out.println("||              10. Listar Tags das Mercadorias      ||");
-        System.out.println("||              11. Listar Percurso da Mercadoria    ||");
-        System.out.println("||              12. Gerar Relatório do Armazém       ||");   
-        System.out.println("||              13. Guardar Dados                    ||");
-        System.out.println("||              14. Carregar Dados                   ||");
-        System.out.println("||              15. Gestão de Tags para Transportes  ||");
+        System.out.println("||              4. Listar Mercadorias                ||");
+        System.out.println("||              5. Associar mercadoria ao Armazem    ||");
+        System.out.println("||              6. Listar Percurso da Mercadoria     ||");
+        System.out.println("||              7. Listar Tags das Mercadorias       ||");
+        System.out.println("||              8. Gerar Relatorio do Armazem        ||");   
+        System.out.println("||              9. Guardar Dados                     ||");
+        System.out.println("||              10. Carregar Dados                   ||");
         System.out.println("||              0. Sair                              ||");
-        System.out.println("||              Escolha uma opção:                   ||");
+        System.out.println("||              Escolha uma opcao:                   ||");
         System.out.println("||===================================================||");
+
     }
-    
-    
-    
     private static void processaropcao(int opcao){
         switch(opcao){
             case 1:
-                criarArmazem();
-                break;
+            criarArmazem();
+            break;
             case 2:
-                listarArmazens();
-                break;
+            listarArmazens();
+            break;
             case 3:
-                criarMercadoria();
-                break;
+            criarMercadoria();
+            break;
             case 4:
-                listarMercadorias();
-                break;
+            listarMercadorias();
+            break;
             case 5:
-                //criarTransporteReciclagem();--Falta implementar
-                break;
+            associarMercadorias();
+            break;
             case 6:
-                //associarMercadoriaTransporte();--Falta implementar
-                break;
+            listarPercursoMercadoria();
+            break;
             case 7:
-                //listarTransportes();--Falta implementar
-                break;
+            listarTagsMercadorias();
+            break;
             case 8:
-                //validarDatasMercadorias();--Falta implementar
-                break;
+            gerarRelatorioArmazem();
+            break;
             case 9:
-                //moverMercadoriasExpiradas();--Falta implementar
-                break;
+            guardarDados();
+            break;
             case 10:
-                listarTagsMercadorias();
-                break;
-            case 11:
-                listarPercursoMercadoria();
-                break;
-            case 12:
-                gerarRelatorioArmazem();
-                break;
-            case 13:
-                guardarDados();
-                break;
-            case 14:
-                carregarDados();
-                break;
-            case 15:
-                //gestaoTagsTransportes();--Falta implementar
-                break;
+            carregarDados();
+            break;
             case 0:
-                System.out.println("Aplicação encerrada.");
-                break;
+            break;
             default:
-                System.out.println("Opção inválida. Tente novamente, por favor.");
+            System.out.println("Opcao invalida.Tente Novamente porfavor.");
         }
     }
-    
     //Criar Armazem Case1
     private static void criarArmazem(){
         System.out.print("Nome do Armazem: ");
         String nome = scanner.nextLine();
         System.out.print("Morada: ");
         String morada = scanner.nextLine();
-        System.out.print("Peso maximo do conjunto de todas as mercadorias: ");
+        System.out.print("Peso maximo do conjunto de : ");
         double peso = scanner.nextDouble();
-        System.out.println("Volume maximo do conjunto de todas as mercadorias: ");
+        System.out.println("Volume maximo: ");
         double volume= scanner.nextDouble();
         armazens.add(new Armazens(nome,morada,peso,volume));
         System.out.println("Armazem criado com sucesso!");
@@ -133,13 +110,13 @@ public class Main {
     private static void criarMercadoria(){
         System.out.print("ID: ");
         String id = scanner.nextLine();
-        System.out.print("Descricao da mercadoria IoT: ");
+        System.out.print("DEscricao: ");
         String descricao = scanner.nextLine();
         System.out.print("Tipo (normal/frágil/perecivel): ");
         String tipo = scanner.nextLine();
-        System.out.print("Peso em gramas: ");
+        System.out.print("Peso: ");
         double peso = scanner.nextDouble();
-        System.out.print("Volume em : ");
+        System.out.print("Volume: ");
         double volume = scanner.nextDouble();
         System.out.print("Tag ID : ");
         String tagId = scanner.next();
@@ -164,7 +141,7 @@ public class Main {
     }
     //Associar Mercadorias Case5
     private static void associarMercadorias(){
-        System.out.print("Nome do Armazem: ");
+        System.out.print("Nome do Armazém: ");
         String nome = scanner.nextLine();
         Armazens armazem = encontrarArmazemPorNome(nome);
         if(armazem == null){
@@ -228,7 +205,7 @@ public class Main {
         System.out.println("Percurso da Mercadoria:");
         for (Armazens armazem : armazens) {
             if (armazem.getMercadoriasList().contains(mercadoria)) {
-                System.out.println("- Armazem: " + armazem.getNome() + ", Morada: " + armazem.getMorada());
+                System.out.println("- Armazém: " + armazem.getNome() + ", Morada: " + armazem.getMorada());
             }
         }
     }

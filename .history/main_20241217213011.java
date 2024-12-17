@@ -23,94 +23,73 @@ public class Main {
         }while (opcao != 0);
         System.out.println("Aplicaççao encerrada.");
 
-    }private static void mostrarMenu(){
-        System.out.println("||    ==== Gestão de Mercadorias em Armazéns ====    ||");
+    }
+    private static void mostrarMenu(){
+        System.out.println("||    ==== Gestão de Mercadorias em Armazens ====    ||");
         System.out.println("||              1. Criar Armazéns                    ||");
         System.out.println("||              2. Listar Armazéns                   ||");
         System.out.println("||              3. Criar Mercadoria                  ||");
-        System.out.println("||              4. Deletar Mercadoria                ||");
-        System.out.println("||              5. Criar Transporte de Reciclagem    ||");
-        System.out.println("||              6. Associar Mercadoria a Transporte  ||");
-        System.out.println("||              7. Listar Transportes                ||");
-        System.out.println("||              8. Validar Datas de Mercadorias      ||");
-        System.out.println("||              9. Mover Mercadorias Expiradas       ||");
+        System.out.println("||              4. Listar Mercadorias                ||");
+        System.out.println("||              5. Associar mercadoria ao Armazem    ||");
+        System.out.println("||              6. Gerar Relatorio do Armazem        ||");   
+        System.out.println("||              7. Guardar Dados                     ||");
+        System.out.println("||              8. Carregar Dados                    ||");
+        System.out.println("||              9. Listar Percurso da Mercadoria     ||");
         System.out.println("||              10. Listar Tags das Mercadorias      ||");
-        System.out.println("||              11. Listar Percurso da Mercadoria    ||");
-        System.out.println("||              12. Gerar Relatório do Armazém       ||");   
-        System.out.println("||              13. Guardar Dados                    ||");
-        System.out.println("||              14. Carregar Dados                   ||");
-        System.out.println("||              15. Gestão de Tags para Transportes  ||");
+        System.out.println("||              11. Listar Transportes               ||");
         System.out.println("||              0. Sair                              ||");
-        System.out.println("||              Escolha uma opção:                   ||");
+        System.out.println("||              Escolha uma opcao:                   ||");
         System.out.println("||===================================================||");
+
     }
-    
-    
-    
     private static void processaropcao(int opcao){
         switch(opcao){
             case 1:
-                criarArmazem();
-                break;
+            criarArmazem();
+            break;
             case 2:
-                listarArmazens();
-                break;
+            listarArmazens();
+            break;
             case 3:
-                criarMercadoria();
-                break;
+            criarMercadoria();
+            break;
             case 4:
-                listarMercadorias();
-                break;
+            listarMercadorias();
+            break;
             case 5:
-                //criarTransporteReciclagem();--Falta implementar
-                break;
-            case 6:
-                //associarMercadoriaTransporte();--Falta implementar
-                break;
-            case 7:
-                //listarTransportes();--Falta implementar
-                break;
-            case 8:
-                //validarDatasMercadorias();--Falta implementar
-                break;
+            associarMercadorias();
+            break;
             case 9:
-                //moverMercadoriasExpiradas();--Falta implementar
-                break;
+            listarPercursoMercadoria();
+            break;
             case 10:
-                listarTagsMercadorias();
-                break;
-            case 11:
-                listarPercursoMercadoria();
-                break;
-            case 12:
-                gerarRelatorioArmazem();
-                break;
-            case 13:
-                guardarDados();
-                break;
-            case 14:
-                carregarDados();
-                break;
-            case 15:
-                //gestaoTagsTransportes();--Falta implementar
-                break;
+            listarTagsMercadorias();
+            break;
+            case 6:
+            gerarRelatorioArmazem();
+            break;
+            case 7:
+            guardarDados();
+            break;
+            case 8:
+            carregarDados();
+            break;
+            
             case 0:
-                System.out.println("Aplicação encerrada.");
-                break;
+            break;
             default:
-                System.out.println("Opção inválida. Tente novamente, por favor.");
+            System.out.println("Opcao invalida.Tente Novamente porfavor.");
         }
     }
-    
     //Criar Armazem Case1
     private static void criarArmazem(){
-        System.out.print("Nome do Armazem: ");
+        System.out.print("Nome do armazem: ");
         String nome = scanner.nextLine();
         System.out.print("Morada: ");
         String morada = scanner.nextLine();
-        System.out.print("Peso maximo do conjunto de todas as mercadorias: ");
+        System.out.print("peso maximo: ");
         double peso = scanner.nextDouble();
-        System.out.println("Volume maximo do conjunto de todas as mercadorias: ");
+        System.out.println("Volume maximo: ");
         double volume= scanner.nextDouble();
         armazens.add(new Armazens(nome,morada,peso,volume));
         System.out.println("Armazem criado com sucesso!");
@@ -133,13 +112,13 @@ public class Main {
     private static void criarMercadoria(){
         System.out.print("ID: ");
         String id = scanner.nextLine();
-        System.out.print("Descricao da mercadoria IoT: ");
+        System.out.print("DEscricao: ");
         String descricao = scanner.nextLine();
         System.out.print("Tipo (normal/frágil/perecivel): ");
         String tipo = scanner.nextLine();
-        System.out.print("Peso em gramas: ");
+        System.out.print("Peso: ");
         double peso = scanner.nextDouble();
-        System.out.print("Volume em : ");
+        System.out.print("Volume: ");
         double volume = scanner.nextDouble();
         System.out.print("Tag ID : ");
         String tagId = scanner.next();
@@ -164,7 +143,7 @@ public class Main {
     }
     //Associar Mercadorias Case5
     private static void associarMercadorias(){
-        System.out.print("Nome do Armazem: ");
+        System.out.print("Nome do Armazém: ");
         String nome = scanner.nextLine();
         Armazens armazem = encontrarArmazemPorNome(nome);
         if(armazem == null){
@@ -204,7 +183,6 @@ public class Main {
         return null;
     }
 
-
     private static Mercadorias encontrarMercadoriaPorId(String id) {
         for (Mercadorias m : mercadorias) {
             if (m.getId().equalsIgnoreCase(id)) {
@@ -214,37 +192,7 @@ public class Main {
         return null;
     }
 
-     //Listar Percurso da Mercadoria Case6
-     private static void listarPercursoMercadoria() {
-        System.out.print("ID da Mercadoria: ");
-        String id = scanner.nextLine();
-    
-        Mercadorias mercadoria = encontrarMercadoriaPorId(id);
-        if (mercadoria == null) {
-            System.out.println("Mercadoria não encontrada.");
-            return;
-        }
-    
-        System.out.println("Percurso da Mercadoria:");
-        for (Armazens armazem : armazens) {
-            if (armazem.getMercadoriasList().contains(mercadoria)) {
-                System.out.println("- Armazem: " + armazem.getNome() + ", Morada: " + armazem.getMorada());
-            }
-        }
-    }
-    //Listar Tags das Mercadorias Case7   
-    private static void listarTagsMercadorias() {
-        if (mercadorias.isEmpty()) {
-            System.out.println("Nenhuma mercadoria disponível.");
-            return;
-        }
-    
-        System.out.println("Tags das Mercadorias:");
-        for (Mercadorias m : mercadorias) {
-            System.out.println("ID: " + m.getId() + ", Tag: " + m.getTag().getTagId());
-        }
-    }
-    //Gerar Relatorio do Armazem Case8
+    //Gerar Relatorio do Armazem Case6
     private static void gerarRelatorioArmazem(){
         System.out.println("Nome do Armazem: ");
         String nome = scanner.nextLine();   
@@ -259,16 +207,47 @@ public class Main {
         String caminho = scanner.nextLine();
         new Relatorios().criarRelatorioArmazens(armazem,caminho);
     }
-    //Guardar Dados Case9
+    //Guardar Dados Case7
     private static void guardarDados(){
         GestaoDeDados.guardarArmazens(armazens,"armazens.json");
         GestaoDeDados.guardarMercadorias(mercadorias,"mercadorias.json");
     }
-    //Carregar Dados Case10
     private static void carregarDados() {
         GestaoDeDados.carregarArmazens("armazens.txt", armazens);
         GestaoDeDados.carregarMercadorias("mercadorias.txt", mercadorias);
     }
-   
+    //Listar Percurso da Mercadoria Case9
+    private static void listarPercursoMercadoria() {
+        System.out.print("ID da Mercadoria: ");
+        String id = scanner.nextLine();
+    
+        Mercadorias mercadoria = encontrarMercadoriaPorId(id);
+        if (mercadoria == null) {
+            System.out.println("Mercadoria não encontrada.");
+            return;
+        }
+    
+        System.out.println("Percurso da Mercadoria:");
+        for (Armazens armazem : armazens) {
+            if (armazem.getMercadoriasList().contains(mercadoria)) {
+                System.out.println("- Armazém: " + armazem.getNome() + ", Morada: " + armazem.getMorada());
+            }
+        }
+    }
+    //Listar Tags das Mercadorias Case10    
+    private static void listarTagsMercadorias() {
+        if (mercadorias.isEmpty()) {
+            System.out.println("Nenhuma mercadoria disponível.");
+            return;
+        }
+    
+        System.out.println("Tags das Mercadorias:");
+        for (Mercadorias m : mercadorias) {
+            System.out.println("ID: " + m.getId() + ", Tag: " + m.getTag().getTagId());
+        }
+    }
+    
+    
+
     
 }

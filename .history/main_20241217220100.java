@@ -29,22 +29,19 @@ public class Main {
         System.out.println("||              2. Listar Armazéns                   ||");
         System.out.println("||              3. Criar Mercadoria                  ||");
         System.out.println("||              4. Deletar Mercadoria                ||");
-        System.out.println("||              5. Criar Transporte de Reciclagem    ||");
-        System.out.println("||              6. Associar Mercadoria a Transporte  ||");
-        System.out.println("||              7. Listar Transportes                ||");
-        System.out.println("||              8. Validar Datas de Mercadorias      ||");
-        System.out.println("||              9. Mover Mercadorias Expiradas       ||");
+        System.out.println("||              5. Adicionar Transportes             ||");
+        System.out.println("||              6. Listar Transportes                ||");
+        System.out.println("||              7. Listar Mercadorias                ||");
+        System.out.println("||              8. Associar Mercadoria ao Armazém    ||");
+        System.out.println("||              9. Listar Percurso da Mercadoria     ||");
         System.out.println("||              10. Listar Tags das Mercadorias      ||");
-        System.out.println("||              11. Listar Percurso da Mercadoria    ||");
-        System.out.println("||              12. Gerar Relatório do Armazém       ||");   
-        System.out.println("||              13. Guardar Dados                    ||");
-        System.out.println("||              14. Carregar Dados                   ||");
-        System.out.println("||              15. Gestão de Tags para Transportes  ||");
+        System.out.println("||              11. Gerar Relatório do Armazém       ||");   
+        System.out.println("||              12. Guardar Dados                    ||");
+        System.out.println("||              13. Carregar Dados                   ||");
         System.out.println("||              0. Sair                              ||");
         System.out.println("||              Escolha uma opção:                   ||");
         System.out.println("||===================================================||");
     }
-    
     
     
     private static void processaropcao(int opcao){
@@ -92,7 +89,7 @@ public class Main {
                 carregarDados();
                 break;
             case 15:
-                //gestaoTagsTransportes();--Falta implementar
+                //gestaoTagsTransportes();-
                 break;
             case 0:
                 System.out.println("Aplicação encerrada.");

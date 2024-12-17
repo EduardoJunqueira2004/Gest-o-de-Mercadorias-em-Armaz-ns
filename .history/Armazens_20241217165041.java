@@ -60,6 +60,5 @@ public class Armazens {
         return mercadoriasList;
     }
 
-    //Método para verificar se o armazém tem capacidade para armazenar uma mercadoria
-    
+    //Método para verificaer 
 }

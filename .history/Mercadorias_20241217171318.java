@@ -24,11 +24,7 @@ Nesse caso até devem ser movimentadas para um armazém de reciclagem por transp
     um meio de transporte externo, o sistema terá capacidade de detetar e atualizar a localização
     da mercadoria.*/
     
-    // Métodos para associar tags IoT e rastrear mercadorias
-
-        //Construtor
-        
-
+    
 }
 
 

@@ -28,38 +28,5 @@ public class Armazens {
    //Getters e Setters:
 
    //Nome
-    public String getNome(){
-         return nome;
-    }
-    public void setNome(String nome){
-        this.nome = nome;
-    }
-    //Morada
-    public String getMorada(){
-        return morada;
-    }
-    public void setMorada(String morada){
-        this.morada = morada;
-    }
-    //MaxPeso
-    public double getMaxPeso(){
-        return maxPeso;
-    }
-    public void setMaxPeso(double maxPeso){
-        this.maxPeso = maxPeso;
-    }
-    //MaxVolume
-    public double getMaxVolume(){
-        return maxVolume;
-    }
-    public void setMaxVolume(double maxVolume){
-        this.maxVolume = maxVolume;
-    }
-    //MercadoriasList
-    public List<Mercadorias> getMercadoriasList(){
-        return mercadoriasList;
-    }
-
-    //Método para verificar se o armazém tem capacidade para armazenar uma mercadoria
-    
+   
 }

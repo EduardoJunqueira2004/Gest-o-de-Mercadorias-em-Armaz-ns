@@ -61,5 +61,10 @@ public class Armazens {
     }
 
     //Método para verificar se o armazém tem capacidade para armazenar uma mercadoria
-    
+    public boolean podeArmazenar(Mercadorias mercadorias){
+        if(mercadorias.getPeso() <= maxPeso && mercadorias.getVolume() <= maxVolume){
+            return true;
+        }
+        return false;
+    }
 }

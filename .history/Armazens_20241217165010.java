@@ -55,11 +55,5 @@ public class Armazens {
     public void setMaxVolume(double maxVolume){
         this.maxVolume = maxVolume;
     }
-    //MercadoriasList
-    public List<Mercadorias> getMercadoriasList(){
-        return mercadoriasList;
-    }
-
-    //Método para verificar se o armazém tem capacidade para armazenar uma mercadoria
     
 }

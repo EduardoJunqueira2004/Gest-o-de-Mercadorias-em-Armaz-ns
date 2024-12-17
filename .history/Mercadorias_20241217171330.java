@@ -26,7 +26,6 @@ Nesse caso até devem ser movimentadas para um armazém de reciclagem por transp
     
     // Métodos para associar tags IoT e rastrear mercadorias
 
-        //Construtor
         
 
 }

@@ -11,24 +11,22 @@ public class Mercadorias {
     private String id;
     private String descricao;
     private String tipo; //podem ser normais, frágeis ou perecíveis.
-    private double peso;
-    private double volume;
-    private IoTTag tag; //permite identificar a sua localização.
+    
     /*
      mercadoria frágil -> não deve ser movimentada internamente num armazém juntamente com outras mercadorias E deve ser movimentada para
 fora do armazém em meio de transporte especial.
     ma mercadoria perecível -> deve ter em consideração eventuais datas de validade para que mercadorias perecíveis do
 mesmo tipo sejam escoadas do armazém por ordem dessa data, evitando assim que as mesmas fiquem estragadas.
 Nesse caso até devem ser movimentadas para um armazém de reciclagem por transporte especial.
+     */
+    private double peso;
+    private double volume;
+    private IoTTag tag; //permite identificar a sua localização. 
     /*Sempre que uma mercadoria é mudada de local dentro do armazém ou sai do armazém para
     um meio de transporte externo, o sistema terá capacidade de detetar e atualizar a localização
     da mercadoria.*/
     
     // Métodos para associar tags IoT e rastrear mercadorias
-
-        //Construtor
-        
-
 }
 
 

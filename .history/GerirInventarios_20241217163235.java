@@ -10,34 +10,16 @@ import java.text.SimpleDateFormat; // Para formatação de datas em relatórios 
 //gestão geral dos armazéns e mercadorias
 public class GerirInventarios {
     private List<Armazens> armazens;
-
-    public GerirInventarios(){
-        this.armazens = new ArrayList<>();
-    }
     
     public void registarArmazem(Armazens armazens) { 
-        armazens.add(armazem);
 
      }
 
     public Armazens encontrarArmazemPorNome(String nome) { 
-        for (Armazens a : armazens){
-            if(a.getNome().equalsIgnoreCase(nome)){
-                return a;
-            }
-        }
-        return null;//se não encontrar retorna null
 
      }
 
-    public boolean moverMercadorias(Armazens origem, Armazens destino, Mercadorias mercadorias) { 
-        if (origem.getMercadoriasList().contains(mercadoria)){
-            if(destino.podeArmazenar(mercadoria)){
-                origem.getMercadoriasList().remove(mercadoria);
-                destino.armazenarMercadoria(mercadoria);
-                return true;
-            }
-        }
-        return false;
+    public void moverMercadorias(Armazens origem, Armazens destino, Mercadorias mercadorias) { 
+
     }
 }

@@ -24,9 +24,9 @@ public class Main {
         System.out.println("Aplicaççao encerrada.");
 
     }private static void mostrarMenu(){
-        System.out.println("||    ==== Gestão de Mercadorias em Armazéns ====    ||");
-        System.out.println("||              1. Criar Armazéns                    ||");
-        System.out.println("||              2. Listar Armazéns                   ||");
+        System.out.println("||    ==== Gestao de Mercadorias em Armazens ====    ||");
+        System.out.println("||              1. Criar Armazens                    ||");
+        System.out.println("||              2. Listar Armazens                   ||");
         System.out.println("||              3. Criar Mercadoria                  ||");
         System.out.println("||              4. Deletar Mercadoria                ||");
         System.out.println("||              5. Criar Transporte de Reciclagem    ||");
@@ -36,12 +36,12 @@ public class Main {
         System.out.println("||              9. Mover Mercadorias Expiradas       ||");
         System.out.println("||              10. Listar Tags das Mercadorias      ||");
         System.out.println("||              11. Listar Percurso da Mercadoria    ||");
-        System.out.println("||              12. Gerar Relatório do Armazém       ||");   
+        System.out.println("||              12. Gerar Relatorio do Armazem       ||");   
         System.out.println("||              13. Guardar Dados                    ||");
         System.out.println("||              14. Carregar Dados                   ||");
-        System.out.println("||              15. Gestão de Tags para Transportes  ||");
+        System.out.println("||              15. Gestao de Tags para Transportes  ||");
         System.out.println("||              0. Sair                              ||");
-        System.out.println("||              Escolha uma opção:                   ||");
+        System.out.println("||              Escolha uma opçao:                   ||");
         System.out.println("||===================================================||");
     }
     

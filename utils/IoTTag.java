@@ -1,12 +1,12 @@
 package utils; // Declara que esta classe faz parte do pacote utils.
 
-import java.util.List;         // Importa a interface List, caso necessário.
-import java.util.ArrayList;    // Importa a classe ArrayList para listas dinâmicas.
-import java.util.HashMap;      // Importa a classe HashMap para estruturas chave-valor.
-import java.util.Map;          // Importa a interface Map.
-import java.util.Date;         // Importa a classe Date para manipulação de datas.
-import java.io.*;              // Importa classes para operações de entrada e saída de ficheiros.
-import java.text.SimpleDateFormat; // Importa a classe SimpleDateFormat para formatar datas.
+//import java.util.List;         // Importa a interface List, caso necessário.
+//import java.util.ArrayList;    // Importa a classe ArrayList para listas dinâmicas.
+//import java.util.HashMap;      // Importa a classe HashMap para estruturas chave-valor.
+//import java.util.Map;          // Importa a interface Map.
+//import java.util.Date;         // Importa a classe Date para manipulação de datas.
+//import java.io.*;              // Importa classes para operações de entrada e saída de ficheiros.
+//import java.text.SimpleDateFormat; // Importa a classe SimpleDateFormat para formatar datas.
 
 public class IoTTag {
     private String tagId; // Identificador único da tag IoT.

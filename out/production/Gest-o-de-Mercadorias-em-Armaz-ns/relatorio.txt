@@ -1,7 +1,0 @@
-Relatorio do armazem: Ana
-Morada: Viana
-Capacidade Maxima: Peso=120.0
-Mercadorias Atuais:
-Mercadoria{id='1', descricao='alface', tipo ='normal', peso=0.5, volume=2.0, tag=23}
-
-Total de Mercadorias: 1

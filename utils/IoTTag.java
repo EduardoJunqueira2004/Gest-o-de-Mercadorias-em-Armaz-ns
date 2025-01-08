@@ -19,6 +19,10 @@ public class IoTTag {
         this.latitude = latitude; // Define a latitude.
         this.longitude = longitude; // Define a longitude.
     }
+    
+    public String getId() {
+        return this.tagId;
+    }
 
     // Método Setter para definir o ID da tag.
     public void setId(String tagId) {
@@ -60,9 +64,5 @@ public class IoTTag {
                 + ", latitude=" + latitude
                 + ", longitude=" + longitude
                 + '}';
-    }
-
-    public String getId() {
-        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

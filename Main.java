@@ -241,7 +241,8 @@ public class Main {
     
         System.out.println("Tags das Mercadorias:");
         for (Mercadorias m : mercadorias) {
-            System.out.println("ID: " + m.getId() + ", Tag: " + m.getTag().getTagId());
+            IoTTag tag = m.getTag();
+            System.out.println("ID: " + m.getId() + ", Tag: " + tag.getId());
         }
     }
     //Gerar Relatorio do Armazem Case8

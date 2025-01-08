@@ -7,8 +7,8 @@ package utils; // Declara que esta classe faz parte do pacote utils.
 //import java.util.Date;         // Importa a classe Date para manipulação de datas.
 //import java.io.*;              // Importa classes para operações de entrada e saída de ficheiros.
 //import java.text.SimpleDateFormat; // Importa a classe SimpleDateFormat para formatar datas.
-
 public class IoTTag {
+
     private String tagId; // Identificador único da tag IoT.
     private double latitude; // Latitude para a localização da tag.
     private double longitude; // Longitude para a localização da tag.
@@ -20,15 +20,11 @@ public class IoTTag {
         this.longitude = longitude; // Define a longitude.
     }
 
-    // Método Getter para obter o ID da tag.
-    public String getTagId() {
-        return tagId;
-    }
-
     // Método Setter para definir o ID da tag.
-    public void setTagId(String tagId) {
+    public void setId(String tagId) {
         this.tagId = tagId;
     }
+    
 
     // Método Getter para obter a latitude.
     public double getLatitude() {
@@ -59,10 +55,14 @@ public class IoTTag {
     // Método toString para representar a tag IoT como uma string.
     @Override
     public String toString() {
-        return "IoTTag{" +
-                "tagId='" + tagId + '\'' +
-                ", latitude=" + latitude +
-                ", longitude=" + longitude +
-                '}';
+        return "IoTTag{"
+                + "tagId='" + tagId + '\''
+                + ", latitude=" + latitude
+                + ", longitude=" + longitude
+                + '}';
+    }
+
+    public String getId() {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

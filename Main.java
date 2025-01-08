@@ -241,7 +241,7 @@ public class Main {
     
         System.out.println("Tags das Mercadorias:");
         for (Mercadorias m : mercadorias) {
-            IoTTag tag = m.getTag();
+            IoTTag tag = (IoTTag) m.getTag();
             System.out.println("ID: " + m.getId() + ", Tag: " + tag.getId());
         }
     }
